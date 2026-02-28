@@ -103,7 +103,7 @@ header div {
   color: #2d4b41;
   width: 100%;
   justify-content: start;
-  align-items: e;
+  align-items: end;
   transition: 0.2s;
   margin: 0;
   font-weight: 1000;
@@ -722,3 +722,4 @@ footer h3 a {
   top: 20px;
   right: 20px;
 }
+
