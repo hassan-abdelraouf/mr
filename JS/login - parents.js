@@ -22,10 +22,10 @@ btn.onclick = function () {
     setTimeout(function () {
       nomassage.style.top = "-80px";
     }, 4000);
-    window.localStorage.setItem("user_Is_perants", "true");
   }
 };
 
 if (localStorage.getItem("user_Is_perants") === "true") {
   window.location.replace("./index.html");
 }
+
