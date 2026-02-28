@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الخبير في الفيزياء</title>
+    <link rel="stylesheet" href="./CSS/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" href="" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <a href="./index.html">منصة الخبير</a>
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+    </header>
+    <div class="okmassage" id="okmassage">تمت إرسال بياناتك بنجاح</div>
+    <div class="okmassage" id="nomassage">تأكد من صحة البيانات</div>
+    <div class="wrapper">
+      <div class="card-switch">
+        <label class="switch" style="margin-top: -30px">
+          <div class="flip-card__inner">
+            <div class="flip-card__back">
+              <div class="title">تسجيل الدخول</div>
+              <form class="flip-card__form">
+                <input
+                  required
+                  id="UserEmail"
+                  class="flip-card__input"
+                  name="البريد الإلكتروني للطالب"
+                  placeholder="البريد الإلكتروني للطالب"
+                  type="email"
+                  minlength="15"
+                />
+                <input
+                  required
+                  id="UserPassword"
+                  class="flip-card__input"
+                  name="الباسورد"
+                  placeholder="الباسورد"
+                  type="password"
+                  minlength="6"
+                />
+                <button id="btn" class="flip-card__btn">تسجيل الدخول</button>
+              </form>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+    <script src="./JS/login - parents.js"></script>
+  </body>
+</html>

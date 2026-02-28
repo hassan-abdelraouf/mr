@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الخبير</title>
+    <link rel="stylesheet" href="../CSS/quiz.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" href="../Pictures/logowe.png" />
+  </head>
+
+  <body>
+    <button id="fullscreenBtn">
+      <label class="container">
+        <input checked="checked" type="checkbox" />
+        <svg
+          viewBox="0 0 448 512"
+          height="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="expand"
+        >
+          <path
+            d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"
+          ></path>
+        </svg>
+        <svg
+          viewBox="0 0 448 512"
+          height="1em"
+          xmlns="http://www.w3.org/2000/svg"
+          class="compress"
+        >
+          <path
+            d="M160 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V64zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32H96v64c0 17.7 14.3 32 32 32s32-14.3 32-32V352c0-17.7-14.3-32-32-32H32zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V64zM320 320c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V384h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320z"
+          ></path>
+        </svg>
+      </label>
+    </button>
+    <header>
+      <a href="../login.html" class="logo-button" id="logoButton"
+        >تسجيل الدخول</a
+      >
+      <button class="subBTN" onclick="showConfirm()">
+        <i class="fa-solid fa-check"></i>إنهاء الامتحان
+      </button>
+      <div class="timer">
+        <span id="timer">30:00</span>
+        <span id="progress" class="progress"></span>
+      </div>
+    </header>
+    <div class="full-close" id="FullClose"></div>
+    <section class="main">
+      <div style="position: relative">
+        <input type="text" id="nameInput" hidden />
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 1.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a1">
+            <input id="a1" type="radio" name="q1" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b1">
+            <input id="b1" type="radio" name="q1" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c1">
+            <input id="c1" type="radio" name="q1" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d1">
+            <input id="d1" type="radio" name="q1" value="1" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 2.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a2">
+            <input id="a2" type="radio" name="q2" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b2">
+            <input id="b2" type="radio" name="q2" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c2">
+            <input id="c2" type="radio" name="q2" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d2">
+            <input id="d2" type="radio" name="q2" value="1" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 3.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a3">
+            <input id="a3" type="radio" name="q3" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b3">
+            <input id="b3" type="radio" name="q3" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c3">
+            <input id="c3" type="radio" name="q3" value="1" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d3">
+            <input id="d3" type="radio" name="q3" value="0" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 4.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a4">
+            <input id="a4" type="radio" name="q4" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b4">
+            <input id="b4" type="radio" name="q4" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c4">
+            <input id="c4" type="radio" name="q4" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d4">
+            <input id="d4" type="radio" name="q4" value="1" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 5.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a5">
+            <input id="a5" type="radio" name="q5" value="1" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b5">
+            <input id="b5" type="radio" name="q5" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c5">
+            <input id="c5" type="radio" name="q5" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d5">
+            <input id="d5" type="radio" name="q5" value="0" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 6.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a6">
+            <input id="a6" type="radio" name="q6" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b6">
+            <input id="b6" type="radio" name="q6" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c6">
+            <input id="c6" type="radio" name="q6" value="1" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d6">
+            <input id="d6" type="radio" name="q6" value="0" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 7.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a7">
+            <input id="a7" type="radio" name="q7" value="1" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b7">
+            <input id="b7" type="radio" name="q7" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c7">
+            <input id="c7" type="radio" name="q7" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d7">
+            <input id="d7" type="radio" name="q7" value="0" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 8.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a8">
+            <input id="a8" type="radio" name="q8" value="1" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b8">
+            <input id="b8" type="radio" name="q8" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c8">
+            <input id="c8" type="radio" name="q8" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d8">
+            <input id="d8" type="radio" name="q8" value="0" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 9.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a9">
+            <input id="a9" type="radio" name="q9" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b9">
+            <input id="b9" type="radio" name="q9" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c9">
+            <input id="c9" type="radio" name="q9" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d9">
+            <input id="d9" type="radio" name="q9" value="1" />
+            <span>د</span>
+          </label>
+        </div>
+        <div class="question">
+          <img src="../Pictures/Quiz/quiz 10.png" />
+          <br />
+          <div style="position: relative">
+            <p>إختر الإجابة الصحيحة:</p>
+            <span class="question-num"></span>
+          </div>
+          <br />
+          <label for="a10">
+            <input id="a10" type="radio" name="q10" value="0" />
+            <span>أ</span>
+          </label>
+          <br />
+          <label for="b10">
+            <input id="b10" type="radio" name="q10" value="0" />
+            <span>ب</span>
+          </label>
+          <br />
+          <label for="c10">
+            <input id="c10" type="radio" name="q10" value="0" />
+            <span>جـ</span>
+          </label>
+          <br />
+          <label for="d10">
+            <input id="d10" type="radio" name="q10" value="1" />
+            <span>د</span>
+          </label>
+        </div>
+      </div>
+      <div class="info">
+        <button id="nextBtn" style="padding-right: 10px" onclick="next()">
+          <i class="fa-solid fa-angle-left"></i>التالي
+        </button>
+        <button id="prevBtn" style="padding-left: 10px" onclick="prev()">
+          السابق<i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+    </section>
+    <div id="confirmBox">
+      <p>هل تريد إرسال الاختبار؟</p>
+      <div class="div">
+        <button onclick="hideConfirm()">
+          <i
+            class="fa-regular fa-circle-xmark"
+            style="
+              position: relative;
+              left: 0px;
+              padding: 0px 0px;
+              top: 0px;
+              font-size: 14px;
+            "
+          ></i
+          >إلغاء
+        </button>
+        <button onclick="submitExam()">
+          <i style="font-size: 14px" class="fa-regular fa-circle-check"></i
+          >إرسال
+        </button>
+      </div>
+    </div>
+    <div class="full-massage" id="FullMassage">
+      <div class="spinner">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <script src="../JS/quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الخبير في الفيزياء</title>
+    <link rel="stylesheet" href="./CSS/quiz.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" href="./Pictures/logowe.png" />
+  </head>
+
+  <body>
+    <header>
+      <button id="profileButton" class="btn">
+        <span class="icon">
+          <svg viewBox="0 0 175 80" width="40" height="40">
+            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+          </svg>
+        </span>
+        <span class="text">القائمة</span>
+      </button>
+      <a href="login.html" class="logo-button" id="logoButton">تسجيل الدخول</a>
+      <div>
+        <a class="logo" href="./index.html">منصة الخبير</a>
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+      <img class="fanos" src="./Pictures/—Pngtree—blue lantern_6078772.png" />
+    </header>
+    <div style="left: -250px" class="settings-box" id="settingsBox">
+      <img src="./Pictures/logowe.png" class="i" />
+      <p>,أهلاً<span id="mainname">أسم الطالب</span></p>
+      <a href="index.html">الرئيسية</a>
+      <a href="courses.html">الدروس</a>
+      <a href="reviews.html">التقييمات</a>
+      <a href="quiz.html">الإختبارات</a>
+      <a href="support.html">الدعم الفني</a>
+      <button id="logoffbtn">تسجيل الخروج</button>
+    </div>
+    <div class="full-close" id="FullClose"></div>
+    <section class="post">
+      <div class="card-quiz">
+        <div style="width: 100%">
+          <h2 style="text-shadow: 2px 3px 1px rgba(100 0 255)">
+            إختبار الإسبوع الرابع
+          </h2>
+          <h3>الحركة الإهتزازية</h3>
+          <div class="card-info">
+            <button
+              style="background-color: rgba(100 0 255)"
+              id="link"
+              href="./Quiz/quiz - 0.html"
+            >
+              الدخول الآن
+            </button>
+            <p id="lastscoresignBTN"><span id="lastscoresign"></span>:درجتك</p>
+            <span id="deadLine">.سيكون متوفر السبت</span>
+            <span
+              style="text-decoration: underline; display: none"
+              id="SuccSubmit"
+              >.تم تسليم الإختبار بنجاح</span
+            >
+          </div>
+        </div>
+        <div id="Time_line"></div>
+      </div>
+    </section>
+    <footer>
+      <div class="info">
+        <div class="Logo">
+          <a class="logo" href="./index.html">منصة الخبير</a>
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <div class="cards">
+          <p>السوشيال ميديا</p>
+          <br />
+          <a
+            target="_blank"
+            style="padding-right: 20px"
+            href="https://www.facebook.com/share/1An273g1xb/"
+            >فيسبوك<i style="top: 3px" class="fa-brands fa-facebook"></i
+          ></a>
+          <br />
+          <a
+            target="_blank"
+            style="padding-right: 20px"
+            href="https://youtube.com/@hassan_phiysics?si=zrrerpDXgSqcFjIc"
+            >يوتيوب<i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+        <div class="cards">
+          <p>الصفحات</p>
+          <br />
+          <a href="courses.html">الدروس</a>
+          <br />
+          <a href="reviews.html">التقييمات</a>
+          <br />
+          <a href="quiz.html">الإختبارات</a>
+          <br />
+          <a href="support.html">الدعم الفني</a>
+        </div>
+      </div>
+      <h3>
+        Developed by="<a href="https://www.facebook.com/HazemMuhammed2009/"
+          >HAZEM</a
+        >,
+        <a href="https://www.facebook.com/profile.php?id=100025284493592"
+          >3BDALLAH</a
+        >"
+      </h3>
+    </footer>
+    <div style="display: none" class="important-massage" id="importantMassage">
+      <h3><i class="fa-regular fa-compass"></i> تعليمات قبل الدخول</h3>
+      <i id="faXmark" class="fa-regular fa-circle-xmark"></i>
+      <p>
+        <span style="text-decoration: underline">تأكد</span> من أنك مستعد قبل
+        البدء. مدة الاختبار: 30 دقيقة. لا تقم بإغلاق الصفحة أثناء الاختبار. يرجى
+        التركيز والإجابة على جميع الأسئلة بعناية. بالتوفيق!
+        <span class="red-sign"
+          ><span style="color: rgb(182, 0, 0)">تنبيه: </span>لا يمكن دخول
+          الإختبار مره اخرى</span
+        >
+      </p>
+      <a href="./Quiz/quiz - 0.html">الدخول الآن</a>
+    </div>
+    <script src="./JS/reviews.js"></script>
+    <script>
+      const div = document.getElementById("Time_line");
+      const year = 2026;
+      const month = 2;
+      const day = 28;
+      const hideHour = 9;
+      const hidePeriod = "PM";
+      // ساعة الاختفاء //
+      const showHour = 10;
+      const showPeriod = "PM";
+      // ساعة الظهور //
+      function checkTime() {
+        const now = new Date();
+        const cairoTime = new Date(
+          now.toLocaleString("en-US", { timeZone: "Africa/Cairo" }),
+        );
+        if (
+          cairoTime.getFullYear() === year &&
+          cairoTime.getMonth() + 1 === month &&
+          cairoTime.getDate() === day
+        ) {
+          let hour = cairoTime.getHours();
+          let period = hour >= 12 ? "PM" : "AM";
+          let hour12 = hour % 12 || 12;
+          if (hour12 === hideHour && period === hidePeriod) {
+            div.style.display = "none";
+          }
+          if (hour12 === showHour && period === showPeriod) {
+            div.style.display = "flex";
+          }
+        }
+      }
+      setInterval(checkTime, 1000);
+      checkTime();
+      let importantMassage = document.getElementById("importantMassage");
+      let faXmark = document.getElementById("faXmark");
+      let lastscoresign = document.getElementById("lastscoresign");
+      let lastscoresignBTN = document.getElementById("lastscoresignBTN");
+      let SuccSubmit = document.getElementById("SuccSubmit");
+      let deadLine = document.getElementById("deadLine");
+      let link = document.getElementById("link");
+      if (localStorage.getItem("examsubmitted_4") === "true") {
+        lastscoresign.innerHTML =
+          window.localStorage.getItem("Lastscore") || "0";
+        lastscoresign.style.display = "block";
+        SuccSubmit.style.display = "block";
+        lastscoresignBTN.style.display = "flex";
+        link.style.display = "none";
+        deadLine.style.display = "none";
+      }
+      FullClose.onclick = function () {
+        document.body.style.overflowY = "auto";
+        FullClose.style.display = "none";
+        importantMassage.style.display = "none";
+        settingsBox.style.left = "-250px";
+      };
+      link.onclick = function () {
+        if (importantMassage.style.display === "none") {
+          importantMassage.style.display = "block";
+          FullClose.style.display = "flex";
+          FullClose.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+          document.body.style.overflowY = "hidden";
+        } else {
+          importantMassage.style.display = "none";
+          FullClose.style.display = "none";
+          settingsBox.style.left = "-250px";
+          document.body.style.overflowY = "auto";
+        }
+      };
+      faXmark.onclick = function () {
+        importantMassage.style.display = "none";
+        settingsBox.style.left = "-250px";
+        FullClose.style.display = "none";
+        document.body.style.overflowY = "auto";
+      };
+      if (window.localStorage.getItem("Userpassword") === "div123") {
+        div.onclick = function () {
+          div.style.display = "none";
+        };
+      }
+      profileButton.onclick = function () {
+        if (settingsBox.style.left === "-250px") {
+          importantMassage.style.display = "none";
+          settingsBox.style.left = "0px";
+          document.body.style.overflowY = "hidden";
+          FullClose.style.display = "flex";
+        } else {
+          settingsBox.style.left = "-250px";
+          document.body.style.overflowY = "auto";
+          FullClose.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

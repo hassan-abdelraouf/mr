@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الخبير في الفيزياء</title>
+    <link rel="stylesheet" href="./CSS/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="icon" href="./Pictures/logowe.png" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <a href="./index.html">منصة الخبير</a>
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+    </header>
+    <div class="okmassage" id="okmassage">تمت إرسال بياناتك بنجاح</div>
+    <div class="okmassage" id="nomassage">تأكد من صحة البيانات</div>
+    <div id="importantMassage" class="important-massage-box">
+      <div class="important-massage">
+        <h3><i class="fa-regular fa-compass"></i> مهم قبل تسجيل الدخول</h3>
+        <i id="faXmark" class="fa-regular fa-circle-xmark"></i>
+        <p>
+          <span style="text-decoration: underline">تأكد</span>
+          من إدخال البيانات الصحيحة قبل تسجيل الدخول. سيتم استخدام الاسم والبريد
+          الإلكتروني ورقم الهاتف وكلمة المرور في جميع الاختبارات. لا يمكن تعديل
+          البيانات بعد تسجيل الدخول. برجاء الالتزام بالإرشادات.
+          <span class="red-sign"
+            ><span style="color: rgb(182, 0, 0)">تنبيه:</span> تأكد من أن تكون
+            البيانات بالعربية</span
+          >
+        </p>
+        <button id="closeBTN">متابعة</button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="card-switch">
+        <label class="switch">
+          <div class="flip-card__inner">
+            <div class="flip-card__back">
+              <div class="title">تسجيل الدخول</div>
+              <form id="contactForm" class="flip-card__form">
+                <input
+                  required
+                  id="UserName"
+                  class="flip-card__input"
+                  name="الإسم"
+                  placeholder="الإسم ثلاثي"
+                  type="text"
+                  minlength="10"
+                />
+                <input
+                  required
+                  id="UserNumber"
+                  class="flip-card__input"
+                  name="رقم الهاتف"
+                  placeholder="رقم الهاتف"
+                  type="tel"
+                  pattern="[0-9]{11}"
+                  title="ادخل رقم هاتف مكون من 11 رقم"
+                />
+                <input
+                  required
+                  id="UserEmail"
+                  class="flip-card__input"
+                  name="البريد الإلكتروني"
+                  placeholder="البريد الإلكتروني"
+                  type="email"
+                  minlength="15"
+                />
+                <div style="position: relative">
+                  <i id="showBTN" class="fa-regular fa-eye"></i>
+                  <input
+                    required
+                    id="UserPassword"
+                    class="flip-card__input"
+                    name="الباسورد"
+                    placeholder="الباسورد"
+                    type="password"
+                    minlength="6"
+                  />
+                </div>
+                <button id="SubmitBTN" class="flip-card__btn">
+                  تسجيل الدخول
+                </button>
+              </form>
+            </div>
+          </div>
+        </label>
+      </div>
+     <script src="./JS/login.js"></script>
+  </body>
+</html>
